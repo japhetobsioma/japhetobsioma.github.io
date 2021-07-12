@@ -3,8 +3,6 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:japhetobsioma/counter/provider/shared_pref_provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import 'app/app.dart';
 
@@ -15,14 +13,8 @@ void main() {
       log(details.exceptionAsString(), stackTrace: details.stack);
     };
 
-    final sharedPreferences = await SharedPreferences.getInstance();
     runApp(
-      ProviderScope(
-        overrides: [
-          sharedPreferencesProvider.overrideWithValue(sharedPreferences),
-        ],
-        child: const App(),
-      ),
+      const ProviderScope(child: App()),
     );
   }, (error, stack) => log('$error', stackTrace: stack));
 }

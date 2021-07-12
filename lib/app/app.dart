@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../counter/view/counter_page.dart';
+import '../personal_website/view/personal_website_page.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -8,9 +8,11 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'japhetobsioma (Japhet Obsioma)',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: const CounterPage(),
+      debugShowCheckedModeBanner: false,
+      title: 'Japhet Obsioma',
+      themeMode: ThemeMode.dark,
+      darkTheme: ThemeData.dark(),
+      home: const PersonalWebsitePage(),
     );
   }
 }
