@@ -13,8 +13,6 @@ void main() {
       log(details.exceptionAsString(), stackTrace: details.stack);
     };
 
-    runApp(
-      const ProviderScope(child: App()),
-    );
+    runApp(const ProviderScope(child: App()));
   }, (error, stack) => log('$error', stackTrace: stack));
 }

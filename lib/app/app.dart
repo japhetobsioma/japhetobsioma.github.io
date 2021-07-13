@@ -7,12 +7,10 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Japhet Obsioma',
-      themeMode: ThemeMode.dark,
-      darkTheme: ThemeData.dark(),
-      home: const PersonalWebsitePage(),
+      home: PersonalWebsitePage(),
     );
   }
 }
